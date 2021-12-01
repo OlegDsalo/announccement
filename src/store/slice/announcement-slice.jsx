@@ -63,7 +63,6 @@ const announcements = createSlice({
             // console.log('similar-action',action.payload)
 
             let similarLetter = title.charAt(0);
-            // console.log('similarLetter', similarLetter);
 
             const filteredSame = state.announcements.filter(announcement => announcement.id !== id)
 
