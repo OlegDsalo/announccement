@@ -1,0 +1,23 @@
+.single-announcements {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+
+  .single-announcement {
+    margin: 0 auto;
+    min-width: 1000px;
+    position: relative;
+    border: 1px solid orchid;
+    border-radius: 20px;
+    padding: 20px;
+
+    .edit-icon {
+      position: absolute;
+      top: calc(30%);
+      right: 0;
+      font-size: 300%
+
+    }
+  }
+}

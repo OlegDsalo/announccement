@@ -1,0 +1,22 @@
+.homepage {
+  margin: 0 auto;
+  width: 700px;
+
+  .home-announcements {
+    border: 1px solid palevioletred;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .title {
+    padding-left: 10px;
+  }
+
+  .icon {
+    font-size: 150%;
+  }
+}
