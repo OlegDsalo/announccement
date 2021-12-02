@@ -38,7 +38,7 @@ const EditAnnouncement = () => {
       </label>
       <label>
         Date added:
-        <input {...register('dateAdded', { required: true })} defaultValue={announcement.dateAdded} />
+        <input {...register('dateAdded', { required: true, max: 10 })} defaultValue={announcement.dateAdded} />
         {errors.dateAdded && <span className="error">This field is required</span>}
       </label>
       <button

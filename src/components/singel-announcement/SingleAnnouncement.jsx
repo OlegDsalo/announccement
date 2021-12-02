@@ -32,7 +32,7 @@ const SingleAnnouncement = () => {
         </p>
         <p>{announcement.description}</p>
         <Link to={`/announcement/${id}/edit`}>
-          <Button type="primary" shape="circle" icon={<EditOutlined />} />
+          <Button className="icon" type="primary" shape="circle" icon={<EditOutlined />} />
         </Link>
       </div>
       {similar.length === 0 ? null

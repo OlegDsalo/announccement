@@ -7,17 +7,17 @@
   .single-announcement, .similar-announcement{
     margin: 5px auto;
     min-width: 1000px;
+    max-width: 1000px;
     position: relative;
     border: 1px solid orchid;
     border-radius: 20px;
     padding: 20px;
 
-    .edit-icon {
+    .icon {
+      margin: 10px 10px 0  0;
       position: absolute;
-      top: calc(30%);
       right: 0;
-      font-size: 300%
-
+      top:0;
     }
   }
 

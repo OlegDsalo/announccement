@@ -33,7 +33,7 @@ const AddAnnouncement = () => {
       </label>
       <label>
         Date added:
-        <input {...register('dateAdded', { required: true })} />
+        <input {...register('dateAdded', { required: true, max: 10 })} />
         {errors.dateAdded && <span>This field is required</span>}
       </label>
       <button className="add-button" type="submit">

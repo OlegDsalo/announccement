@@ -61,7 +61,7 @@ const announcements = createSlice({
       const inputValue = action.payload;
       const result = current(state.announcements);
       if (inputValue) {
-        state.filtered = result.filter((announcement) => announcement.title.include(inputValue));
+        state.filtered = result.filter((announcement) => announcement.title.search(inputValue) !== -1);
         state.isFiltered = true;
       } else {
         state.isFiltered = false;
