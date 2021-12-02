@@ -10,8 +10,8 @@ import './App.scss';
 const App = () => (
   <div className="App">
     <header>
-      <Link to="/">Home </Link>
-      <Link to="/announcement">Announcement </Link>
+      <Link to="/">Home</Link>
+      <Link to="/announcement">Announcement</Link>
       <Link to="/add">Add announcement </Link>
     </header>
     <Routes>
