@@ -2,7 +2,7 @@
   "name": "announcement",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://olegdsalo.github.io/announccement",
+  "homepage": "https://olegdsalo.github.io/announcement/",
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@reduxjs/toolkit": "^1.6.2",
