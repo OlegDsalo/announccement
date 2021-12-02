@@ -17,8 +17,9 @@ const SingleAnnouncement = () => {
     const announcement = useSelector(SelectSingle);
     dispatch(similarAnnouncement({title: announcement.title, id: announcement.id}));
 
+
     const similar = useSelector(SelectSimilar);
-    console.log('similar',similar)
+    console.log('render')
 
     return (
         <div className='single-announcements'>
@@ -35,9 +36,7 @@ const SingleAnnouncement = () => {
                     <h1>Similar Announcements</h1>
                     {similar.map(item =>
                         <div className='similar-announcement' key={item.id}>
-                            <Link to={`/announcement/${item.id}`}>
-                                <h2>Title: {item.title}</h2>
-                            </Link>
+                            <h2>Title: {item.title}</h2>
                             <p>Date added: {item.dateAdded}</p>
                             <p>{item.description}</p>
                         </div>
