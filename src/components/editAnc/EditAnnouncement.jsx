@@ -1,9 +1,10 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {editAnnouncement, singleAnnouncement, singleSelect} from "../../store/slice/announcement-slice";
+import {editAnnouncement, singleAnnouncement,} from "../../store/slice/announcement-slice";
 import {useForm} from "react-hook-form";
 import {useNavigate, useParams} from "react-router-dom";
 import './EditAnnouncement.scss';
+import {SelectSingle} from "../../store/slice/announcement-selector";
 
 const EditAnnouncement = () => {
     const dispatch = useDispatch();
@@ -11,7 +12,7 @@ const EditAnnouncement = () => {
     const {register, handleSubmit, formState: {errors}} = useForm();
     const navigate = useNavigate();
     dispatch(singleAnnouncement(Number(id)));
-    const announcement = useSelector(singleSelect);
+    const announcement = useSelector(SelectSingle);
 
     const onSubmit = (data) => {
         const editedAnnouncement = {...data, id: Number(id)};
@@ -38,7 +39,7 @@ const EditAnnouncement = () => {
             </label>
             <label>
                 Date added:
-                <input {...register('dateAdded', {required: true})} defaultValue={announcement.dateAdded}/>
+                <input type='number' {...register('dateAdded', {required: true})} defaultValue={announcement.dateAdded}/>
                 {errors.dateAdded && <span className='error'>This field is required</span>}
             </label>
             <button className='edit-button' type="submit"

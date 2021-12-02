@@ -1,9 +1,10 @@
 import React from 'react';
 import './Announcement.scss';
 import {useDispatch, useSelector} from "react-redux";
-import {announcementSelect, deleteAnnouncement} from "../../store/slice/announcement-slice";
+import { deleteAnnouncement} from "../../store/slice/announcement-slice";
 import {Link, useParams} from "react-router-dom";
 import {DeleteOutlined, EditOutlined} from "@ant-design/icons";
+import {SelectAllAnnouncementSelect} from "../../store/slice/announcement-selector";
 
 const Announcement = () => {
     const dispatch = useDispatch();
@@ -11,7 +12,7 @@ const Announcement = () => {
     const deleteHandler = (id) => {
         dispatch(deleteAnnouncement({id: id}));
     }
-    const announcements = useSelector(announcementSelect);
+    const announcements = useSelector(SelectAllAnnouncementSelect);
 
     return (
         <div className='announcements'>
@@ -23,7 +24,7 @@ const Announcement = () => {
                         </Link>
                         <p>{announcement.dateAdded}</p>
                         <p>{announcement.description}</p>
-                        <Link to={`/announcement/${id}/edit`}><EditOutlined className='icon edit'/> </Link>
+                        <Link to={`/announcement/${announcement.id}/edit`}><EditOutlined className='icon edit'/> </Link>
                         <button className=' icon delete' onClick={() => deleteHandler(announcement.id)}>
                             <DeleteOutlined/>
                         </button>

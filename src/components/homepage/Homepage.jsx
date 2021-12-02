@@ -1,22 +1,20 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {
-    announcementSelect,
     deleteAnnouncement,
     filterAnnouncement,
-    filteredSelect,
-    SelectIsFiltered,
 } from "../../store/slice/announcement-slice";
 import './Homepage.scss'
 import {Link} from "react-router-dom";
 import {Input} from "antd";
 import {DeleteOutlined, EditOutlined} from "@ant-design/icons";
+import {SelectFiltered, SelectAllAnnouncementSelect, SelectIsFiltered} from "../../store/slice/announcement-selector";
 
 const Homepage = () => {
-    const announcements = useSelector(announcementSelect);
+    const announcements = useSelector(SelectAllAnnouncementSelect);
     const dispatch = useDispatch();
 
-    const filtered = useSelector(filteredSelect);
+    const filtered = useSelector(SelectFiltered);
     const isFiltered = useSelector(SelectIsFiltered);
 
     const handleSearch = (event) => {

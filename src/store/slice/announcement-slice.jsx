@@ -41,7 +41,6 @@ const announcements = createSlice({
         },
         singleAnnouncement: (state, action) => {
             const id = action.payload;
-            console.log('slice', id);
             state.single = state.announcements.find(announcement => announcement.id === id);
         },
         filterAnnouncement: (state, action) => {
@@ -86,9 +85,10 @@ export const {
     similarAnnouncement,
 } = announcements.actions;
 
-export const announcementSelect = state => state.announcements.announcements;
-export const singleSelect = state => state.announcements.single;
-export const filteredSelect = state => state.announcements.filtered;
-export const SelectIsFiltered = state => state.announcements.isFiltered;
-export const SelectedSimilar = state => state.announcements.similar;
+// export const announcementSelect = state => state.announcements.announcements;
+// export const singleSelect = state => state.announcements.single;
+// export const filteredSelect = state => state.announcements.filtered;
+// export const SelectIsFiltered = state => state.announcements.isFiltered;
+//
+// export const SelectedSimilar = state => state.announcements.similar;
 

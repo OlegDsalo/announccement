@@ -14,4 +14,8 @@
   input, textarea {
     width: 100%;
   }
+  textarea{
+    resize: none;
+    height: 200px;
+  }
 }

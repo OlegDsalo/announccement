@@ -4,8 +4,8 @@
   align-content: center;
   align-items: center;
 
-  .single-announcement {
-    margin: 0 auto;
+  .single-announcement, .similar-announcement{
+    margin: 5px auto;
     min-width: 1000px;
     position: relative;
     border: 1px solid orchid;
@@ -20,4 +20,5 @@
 
     }
   }
+
 }
