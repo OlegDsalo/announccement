@@ -6,36 +6,15 @@
   padding: 5px;
 
   .container {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .announcement {
-    display: flex;
-    flex-direction: column;
     border: 1px solid plum;
     border-radius: 30px;
     width: 900px;
     position: relative;
     padding: 10px;
     margin: 5px 0;
+    max-height: 300px;
   }
 
-  .edit-button {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: calc(70% - 40px);
-    right: 0;
-  }
-
-  .icon {
-    position: absolute;
-    right: 10px;
-    top: calc(50% - 20px);
-    font-size: 150%;
-    border-color: orchid;
-  }
 
   .edit {
     top: calc(40% - 20px);
@@ -49,5 +28,16 @@
     top: calc(80% - 20px);
     border-radius: 100%;
 
+  }
+
+  .icon-block{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0;
+
+  }
+  .icon{
+    margin: 0 5px;
   }
 }

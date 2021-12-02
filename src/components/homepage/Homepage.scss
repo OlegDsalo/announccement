@@ -7,16 +7,18 @@
     margin-top: 5px;
     padding: 10px;
     border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
   }
 
   .title {
     padding-left: 10px;
   }
 
-  .icon {
-    font-size: 150%;
+  .icon-blog {
+    white-space: pre-line;
   }
+
+  .icon {
+    margin: 0 5px;
+  }
+
 }
