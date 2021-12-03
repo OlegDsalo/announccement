@@ -1,6 +1,7 @@
 .homepage {
   margin: 0 auto;
-  width: 700px;
+
+  width: 800px;
   white-space: pre-line;
 
   .home-announcements {
@@ -8,7 +9,8 @@
     margin-top: 5px;
     padding: 10px;
     border-radius: 20px;
-    //word-wrap: break-word;
+    width: 800px;
+    position: relative;
     word-break: break-all;
     overflow-wrap: break-word ;
   }
@@ -18,7 +20,8 @@
   }
 
   .icon-blog {
-    white-space: pre-line;
+    position: absolute;
+    right: 0;
   }
 
   .icon {

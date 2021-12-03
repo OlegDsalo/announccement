@@ -3,6 +3,8 @@ import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { EditOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
+import Title from 'antd/es/typography/Title';
+import Paragraph from 'antd/es/typography/Paragraph';
 import {
   similarAnnouncement,
   getAnnouncementById,
@@ -22,17 +24,17 @@ const SingleAnnouncement = () => {
   return (
     <div className="single-announcements">
       <div className="single-announcement">
-        <h2>
+        <Title level={5}>
           Title:
           {announcement.title}
-        </h2>
-        <p>
+        </Title>
+        <Paragraph>
           Date added:
           {announcement.dateAdded}
-        </p>
-        <p>{announcement.description}</p>
+        </Paragraph>
+        <Paragraph>{announcement.description}</Paragraph>
         <Link to={`/announcement/${id}/edit`}>
-          <Button className="icon" type="primary" shape="circle" icon={<EditOutlined />} />
+          <Button className="icon" type="primary" size="large" shape="circle" icon={<EditOutlined />} />
         </Link>
       </div>
       {similar.length === 0 ? null
@@ -41,15 +43,15 @@ const SingleAnnouncement = () => {
             <h1>Similar Announcements</h1>
             {similar.map((item) => (
               <div className="similar-announcement" key={item.id}>
-                <h2>
+                <Title level={5}>
                   Title:
                   {item.title}
-                </h2>
-                <p>
+                </Title>
+                <Paragraph>
                   Date added:
                   {item.dateAdded}
-                </p>
-                <p>{item.description}</p>
+                </Paragraph>
+                <Paragraph>{item.description}</Paragraph>
               </div>
             ))}
           </>

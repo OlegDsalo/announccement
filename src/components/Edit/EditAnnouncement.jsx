@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useParams } from 'react-router-dom';
+import Title from 'antd/es/typography/Title';
 import { editAnnouncement, getAnnouncementById } from '../../store/slice/announcement-slice';
 import './EditAnnouncement.scss';
 import { SelectSingle } from '../../store/slice/announcement-selector';
@@ -25,19 +26,24 @@ const EditAnnouncement = () => {
 
   return (
     <form className="edit-form" onSubmit={handleSubmit(onSubmit)}>
-      <h1>{`Edit post ${id}`}</h1>
+      <Title level={3}>{`Edit post ${id}`}</Title>
       <label>
-        Title:
-        <input {...register('title', { required: true })} defaultValue={announcement.title} />
-        {errors.title && <span className="error">This field is required</span>}
+        <Title level={5}> Title:</Title>
+        <input {...register('title', { required: true, maxLength: 30 })} defaultValue={announcement.title} />
+        {errors.title && errors.title?.type === 'required' && (
+          <span className="error" role="alert">This is required</span>
+        )}
+        {errors.title && errors.title?.type === 'maxLength' && (
+          <span className="error" role="alert">Max length exceeded 30 </span>
+        )}
       </label>
       <label>
-        Description:
+        <Title level={5}>Description: </Title>
         <textarea {...register('description', { required: true })} defaultValue={announcement.description} />
         {errors.description && <span className="error">This field is required</span>}
       </label>
       <label>
-        Date added:
+        <Title level={5}>Date added:</Title>
         <input type="date" min="2020-01-01" max="2025-01-01" {...register('dateAdded', { required: true, max: 10 })} defaultValue={announcement.dateAdded} />
         {errors.dateAdded && <span className="error">This field is required</span>}
       </label>
