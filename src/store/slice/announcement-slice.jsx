@@ -41,15 +41,13 @@ const announcements = createSlice({
   },
   reducers: {
     addAnnouncement: (state, action) => {
-      state.announcements = [...state.announcements, action.payload];
+      state.announcements = [action.payload, ...state.announcements];
     },
     deleteAnnouncement: (state, action) => {
       state.announcements = state.announcements.filter((announcement) => announcement.id !== action.payload.id);
     },
     editAnnouncement: (state, action) => {
       const { id } = action.payload;
-      // console.log('announcements', JSON.stringify((state.announcements), null, 2));
-      // console.log('curent-announcements', current(state.announcements));
       const announcements = current(state.announcements);
       state.announcements = announcements.map((announcement) => (announcement.id === id ? action.payload : announcement));
     },
