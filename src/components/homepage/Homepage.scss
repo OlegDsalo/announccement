@@ -4,7 +4,7 @@
   white-space: pre-line;
 
   .home-announcements {
-    border: 1px solid palevioletred;
+    border: 1px solid black;
     margin-top: 5px;
     padding: 10px;
     border-radius: 20px;
@@ -15,16 +15,13 @@
     background:white;
   }
 
-  .title {
-    padding-left: 10px;
-  }
-
-  .icon-blog {
-    position: absolute;
-    right: 0;
+  .icon-block {
+  margin: 0 5px 5px 0;
   }
 
   .icon {
+    background: black;
+    border-color: black;
     padding: 5px;
   }
 

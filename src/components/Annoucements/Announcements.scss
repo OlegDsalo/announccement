@@ -1,12 +1,10 @@
 .announcements {
-  //display: flex;
-  //flex-direction: column;
   max-width: 900px;
   margin: 5px auto;
   padding: 5px;
 
   .container {
-    border: 1px solid plum;
+    border: 1px solid black;
     border-radius: 30px;
     width: 900px;
     position: relative;
@@ -27,6 +25,8 @@
 
   }
   .icon{
+    background: black;
+    border-color: black;
     margin: 0 5px;
   }
 }

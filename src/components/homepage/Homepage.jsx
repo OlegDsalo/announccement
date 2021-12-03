@@ -9,12 +9,12 @@ import {
   deleteAnnouncement,
   filterAnnouncement,
 } from '../../store/slice/announcement-slice';
-import './Homepage.scss';
 import {
   SelectFiltered,
   SelectAllAnnouncementSelect,
   SelectIsFiltered,
 } from '../../store/slice/announcement-selector';
+import './Homepage.scss';
 
 const Homepage = () => {
   const announcements = useSelector(SelectAllAnnouncementSelect);
@@ -41,7 +41,7 @@ const Homepage = () => {
               <h1 className="title">{announcement.title}</h1>
             </Link>
           </Col>
-          <Col span={2} className="icon-block">
+          <Col span={1} className="icon-block">
             <Link to={`/announcement/${announcement.id}/edit`}>
               <Button
                 type="primary"

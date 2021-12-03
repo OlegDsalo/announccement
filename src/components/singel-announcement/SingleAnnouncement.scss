@@ -9,16 +9,19 @@
     min-width: 1000px;
     max-width: 1000px;
     position: relative;
-    border: 1px solid orchid;
+    border: 1px solid black;
     border-radius: 20px;
     padding: 20px;
     word-break: break-all;
+    background: white;
 
     .icon {
       margin: 10px 10px 0  0;
       position: absolute;
       right: 0;
       top:0;
+      background: black;
+      border-color: black;
     }
   }
 
