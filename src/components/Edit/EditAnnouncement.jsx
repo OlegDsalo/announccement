@@ -29,7 +29,7 @@ const EditAnnouncement = () => {
       <Title level={3}>{`Edit post ${id}`}</Title>
       <label>
         <Title level={5}> Title:</Title>
-        <input {...register('title', { required: true, maxLength: 30 })} defaultValue={announcement.title} />
+        <input {...register('title', { required: true, maxLength: 50 })} defaultValue={announcement.title} />
         {errors.title && errors.title?.type === 'required' && (
           <span className="error" role="alert">This is required</span>
         )}

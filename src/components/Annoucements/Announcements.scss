@@ -1,6 +1,6 @@
 .announcements {
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
   max-width: 900px;
   margin: 5px auto;
   padding: 5px;
@@ -16,21 +16,7 @@
     word-break: break-all;
     overflow-wrap: break-word ;
     overflow: hidden;
-  }
-
-
-  .edit {
-    top: calc(40% - 20px);
-    border: 1px solid orchid;
-    border-radius: 100%;
-    padding: 10px;
-    color: black
-  }
-
-  .delete {
-    top: calc(80% - 20px);
-    border-radius: 100%;
-
+    background: white;
   }
 
   .icon-block{

@@ -32,36 +32,36 @@ const Homepage = () => {
   const items = isFiltered ? filtered : announcements;
   return (
     <Row className="homepage">
-      <Col>
-        <h1>Announcements </h1>
-        <Input onChange={handleSearch} />
-        {items.map((announcement) => (
-          <Row justify="space-between" className="home-announcements" key={announcement.id} xs={23} sm={23} md={23} lg={11} xl={11} xxl={11}>
+      <h1>Announcements </h1>
+      <Input onChange={handleSearch} />
+      {items.map((announcement) => (
+        <Row justify="space-between" className="home-announcements" key={announcement.id} xs={23} sm={23} md={23} lg={11} xl={11} xxl={11}>
+          <Col span={22}>
             <Link to={`/announcement/${announcement.id}`}>
               <h1 className="title">{announcement.title}</h1>
             </Link>
-            <div className="icon-block">
-              <Link to={`/announcement/${announcement.id}/edit`}>
-                <Button
-                  type="primary"
-                  shape="circle"
-                  icon={<EditOutlined />}
-                  className="icon"
-                  size="large"
-                />
-              </Link>
+          </Col>
+          <Col span={2} className="icon-block">
+            <Link to={`/announcement/${announcement.id}/edit`}>
               <Button
                 type="primary"
-                onClick={deleteHandler(announcement.id)}
                 shape="circle"
-                icon={<DeleteOutlined />}
+                icon={<EditOutlined />}
                 className="icon"
                 size="large"
               />
-            </div>
-          </Row>
-        ))}
-      </Col>
+            </Link>
+            <Button
+              type="primary"
+              onClick={deleteHandler(announcement.id)}
+              shape="circle"
+              icon={<DeleteOutlined />}
+              className="icon"
+              size="large"
+            />
+          </Col>
+        </Row>
+      ))}
     </Row>
   );
 };

@@ -33,7 +33,7 @@ const AddAnnouncement = () => {
         <Title level={5}> Title:</Title>
         <input {...register('title', {
           required: true,
-          maxLength: 30,
+          maxLength: 50,
         })}
         />
         {errors.title && errors.title?.type === 'required' && (

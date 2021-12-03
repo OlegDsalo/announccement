@@ -3,7 +3,7 @@
   flex-direction: column;
   margin: 200px auto;
   background: #b7b7b7;
-  width: 500px;
+  max-width: 500px;
   border: 1px solid black;
   padding: 10px;
 
@@ -29,3 +29,11 @@
   }
 }
 
+
+@media (max-width: 500px) {
+  .form-add-anc{
+    width: 100%;
+    margin: 0;
+  }
+
+}
