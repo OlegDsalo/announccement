@@ -35,7 +35,17 @@ const Homepage = () => {
       <h1>Announcements </h1>
       <Input onChange={handleSearch} />
       {items.map((announcement) => (
-        <Row justify="space-between" className="home-announcements" key={announcement.id} xs={23} sm={23} md={23} lg={11} xl={11} xxl={12}>
+        <Row
+          justify="space-between"
+          className="home-announcements"
+          key={announcement.id}
+          xs={23}
+          sm={23}
+          md={23}
+          lg={11}
+          xl={11}
+          xxl={12}
+        >
           <Col span={22}>
             <Link to={`/announcement/${announcement.id}`}>
               <h1 className="title">{announcement.title}</h1>
