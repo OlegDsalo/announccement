@@ -23,7 +23,7 @@ const SingleAnnouncement = () => {
 
   return (
     <Row className="single-announcements" xs={23} sm={23} md={23} lg={11} xl={11} xxl={11}>
-      <Col span={12} className="single-announcement">
+      <Col className="single-announcement">
         <Title level={4}>
           {announcement.title}
         </Title>
@@ -37,7 +37,7 @@ const SingleAnnouncement = () => {
       </Col>
       {similar.length === 0 ? null
         : (
-          <Col span={12} className="similar-announcements">
+          <Col className="similar-announcements">
             <h1>Similar Announcements</h1>
             {similar.map((item) => (
               <div className="similar-announcement" key={item.id}>
