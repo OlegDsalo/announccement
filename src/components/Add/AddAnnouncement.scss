@@ -23,7 +23,8 @@
   input, textarea {
     width: 100%;
   }
-  textarea{
+
+  textarea {
     resize: none;
     height: 200px;
   }
@@ -31,9 +32,8 @@
 
 
 @media (max-width: 500px) {
-  .form-add-anc{
+  .form-add-anc {
     width: 100%;
     margin: 0;
   }
-
 }

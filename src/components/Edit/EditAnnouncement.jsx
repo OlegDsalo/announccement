@@ -29,7 +29,10 @@ const EditAnnouncement = () => {
       <Title level={3}>{`Edit post ${id}`}</Title>
       <label>
         <Title level={5}> Title:</Title>
-        <input {...register('title', { required: true, maxLength: 50 })} defaultValue={announcement.title} />
+        <input
+          {...register('title', { required: true, maxLength: 50 })}
+          defaultValue={announcement.title}
+        />
         {errors.title && errors.title?.type === 'required' && (
           <span className="error" role="alert">This is required</span>
         )}
@@ -39,12 +42,21 @@ const EditAnnouncement = () => {
       </label>
       <label>
         <Title level={5}>Description: </Title>
-        <textarea {...register('description', { required: true })} defaultValue={announcement.description} />
+        <textarea
+          {...register('description', { required: true })}
+          defaultValue={announcement.description}
+        />
         {errors.description && <span className="error">This field is required</span>}
       </label>
       <label>
         <Title level={5}>Date added:</Title>
-        <input type="date" min="2020-01-01" max="2025-01-01" {...register('dateAdded', { required: true, max: 10 })} defaultValue={announcement.dateAdded} />
+        <input
+          type="date"
+          min="2020-01-01"
+          max="2025-01-01"
+          {...register('dateAdded', { required: true, max: 10 })}
+          defaultValue={announcement.dateAdded}
+        />
         {errors.dateAdded && <span className="error">This field is required</span>}
       </label>
       <button

@@ -12,19 +12,20 @@
     margin: 5px 0;
     max-height: 250px;
     word-break: break-all;
-    overflow-wrap: break-word ;
+    overflow-wrap: break-word;
     overflow: hidden;
     background: white;
   }
 
-  .icon-block{
+  .icon-block {
     display: flex;
     flex-direction: row;
     position: absolute;
     right: 0;
 
   }
-  .icon{
+
+  .icon {
     background: black;
     border-color: black;
     margin: 0 5px;

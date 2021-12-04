@@ -45,7 +45,9 @@ const AddAnnouncement = () => {
       </label>
       <label>
         <Title level={5}>Description: </Title>
-        <textarea {...register('description', { required: true })} />
+        <textarea
+          {...register('description', { required: true })}
+        />
         {errors.descriptio && <span className="error" role="alert">This is required</span>}
       </label>
       <label>
