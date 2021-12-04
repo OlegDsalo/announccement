@@ -5,6 +5,8 @@ import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
 import {
   Button, Col, Input, Row,
 } from 'antd';
+import Paragraph from 'antd/es/typography/Paragraph';
+import Title from 'antd/es/typography/Title';
 import {
   SelectAllAnnouncementSelect,
   SelectFiltered, SelectIsFiltered,
@@ -32,22 +34,16 @@ const Announcements = () => {
         <Row justify="space-between" className="container" key={announcement.id} xs={23} sm={23} md={23} lg={11} xl={11} xxl={11}>
           <Col>
             <Link to={`/announcement/${announcement.id}`}>
-              <h2>
-                Title:
-                &nbsp;
+              <Title level={3}>
                 {announcement.title}
-              </h2>
+              </Title>
             </Link>
-            <p>
-              Date added:
-              &nbsp;
+            <Paragraph>
               {announcement.dateAdded}
-            </p>
-            <p>
-              Description:
-              &nbsp;
+            </Paragraph>
+            <Paragraph>
               {announcement.description}
-            </p>
+            </Paragraph>
           </Col>
           <Col className="icon-block">
             <Link to={`/announcement/${announcement.id}/edit`}>

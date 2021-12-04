@@ -40,7 +40,7 @@ const AddAnnouncement = () => {
           <span className="error" role="alert">This is required</span>
         )}
         {errors.title && errors.title?.type === 'maxLength' && (
-          <span className="error" role="alert">Max length exceeded 30 </span>
+          <span className="error" role="alert">Max length exceeded 50 </span>
         )}
       </label>
       <label>
